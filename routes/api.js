@@ -120,7 +120,7 @@ module.exports = function (app) {
         });
       } catch (err) {
         // Handle errors and send an appropriate response
-        res.status(500).json({ error: "An error occurred while adding the comment" });
+        return res.send("no book exists");
       }
     })
 
