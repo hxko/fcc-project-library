@@ -1,34 +1,155 @@
-.border {
-  border-style: solid;
-  border-width: 1px;
-  margin: 10px;
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-#sampleui {
-  max-width: 450px;
-  margin-left: 5%;
-  height: 100%;
-}
-
-#sampleposting {
-  max-width: 450px;
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
   text-align: center;
-  margin-left: 5%;
 }
 
-#userstories {
-  margin-left: 5%;
+h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+h2 {
+  color: #333;
+}
+
+h4 {
+  color: #666;
+  width: 40%;
+  box-sizing: border-box;
+}
+
+.border {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 5px;
 }
 
 form {
-  padding: 5px;
+  margin-bottom: 20px;
 }
 
 label {
   display: block;
+  margin-bottom: 8px;
   font-weight: bold;
 }
 
-input {
+input[type="text"] {
+  /* width: calc(100% - 22px); */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-right: 10px;
+  height: 40px;
+}
+
+
+input[type="submit"],
+button {
+  background-color: #5cb85c;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background-color: #4cae4c;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+}
+
+#display,
+#bookDetail {
+  margin-top: 20px;
+}
+
+#display div {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+#bookDetail {
+  margin-top: 30px;
+}
+
+#detailTitle {
+  font-weight: bold;
+}
+
+#detailComments {
+  list-style-type: none;
+  padding: 0;
+}
+
+#detailComments li {
+  background-color: #f9f9f9;
   margin-bottom: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#deleteAllBooks {
+  background-color: #d9534f;
+}
+
+#deleteAllBooks:hover {
+  background-color: #c9302c;
+}
+
+@media (min-width: 600px) {
+  form {
+    display: flex;
+    align-items: center;
+  }
+
+  form label {
+    width: 150px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
+
+  form input[type="text"] {
+    flex: 1;
+  }
+
+  form input[type="submit"],
+  form button {
+    margin-left: 10px;
+  }
+
+  #sampleposting,
+  #sampleui {
+    width: 800px;
+    margin: 0 auto;
+  }
 }
